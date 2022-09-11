@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Countries</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="container">
+        <div class="inner row mt-5">
+
+          <!-- SEARCH -->
+          <div class="left-div col-5">
+            <h2>Search</h2>
+            <form class="js-form-search d-flex w-50 mt-5">
+              <input class="js-form-input form-control me-3" type="text" placeholder="Write a country" value="China"
+                required />
+              <button class="btn btn-primary" type="submit">submit</button>
+            </form>
+          </div>
+
+          <!-- COUNTRIES LIST -->
+          <div class="right-div col-7">
+            <h2>Countries</h2>
+            <ul class="js-countries-list mt-5 d-flex flex-wrap p-0 justify-content-between"></ul>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div class="js-modal-wrapper modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"></div>        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEMPLATES -->
+  <template id="template">
+    <li class="card mb-3" style="width: 18rem">
+      <img src="..." class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title mb-3"></h5>
+        <p class="card-text-1">
+        </p>
+        <p class="card-text-2"></p>
+        <p class="card-text-3"></p>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="card-text-4"></p>
+
+          <!-- Button trigger modal -->
+          <button type="button" class="js-button-cca btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            more
+          </button>
+
+        </div>
+      </div>
+    </li>
+  </template>
+
+  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
